@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Project 1 - Innovative Process Design</title>
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -19,13 +19,40 @@
       line-height: 1.6;
     }
 
-    /* Navbar now uses the same uniform pastel pink as the main page */
+    /* Navbar now uses the same uniform pastel pink as the main page and black font */
     .navbar {
       background: linear-gradient(135deg, #fff0f5, #fff0f5);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #000; /* Black logo text */
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links li a {
+      font-size: 1rem;
+      padding: 0.3rem 0;
+      transition: color 0.3s;
+      color: #000; /* Black navigation link text */
+    }
+    .nav-links li a:hover {
+      color: #ff69b4;
     }
 
     /* Container for layout consistency */
