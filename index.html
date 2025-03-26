@@ -3,77 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Minimal Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Christine Pearl Agustin - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- AOS Animation Library CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-
   <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-container">
-      <div class="logo">MyName</div>
+      <div class="logo">Christine Pearl Agustin</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/photography.html">Photography</a></li>
+          <li><a href="pages/books.html">Books</a></li>
+          <li><a href="pages/resume.html">Resume</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section">
+  <section id="hero" class="hero-section" data-aos="fade-in">
     <div class="container hero-container">
-      <h1>Hello, I'm <span class="accent">Your Name</span></h1>
-      <p>I'm a Front-End Developer who loves building beautiful, accessible, and responsive websites.</p>
-      <a href="#projects" class="btn">View My Work</a>
+      <h1 data-aos="fade-up" data-aos-delay="200">Hi, I'm Christine Pearl Agustin</h1>
+      <p data-aos="fade-up" data-aos-delay="400">
+        When I'm not doing engineering, I'm capturing life's moments and getting lost in a great book.
+      </p>
+      <a href="pages/projects.html" class="btn" data-aos="fade-up" data-aos-delay="600">View My Work</a>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
+  <!-- About Section -->
+  <section id="about" class="about-section" data-aos="fade-in">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of the project.</p>
-          <a href="#" class="project-link">See More</a>
-        </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>A short description of the project.</p>
-          <a href="#" class="project-link">See More</a>
-        </div>
-        <div class="project-card">
-          <h3>Project Three</h3>
-          <p>A short description of the project.</p>
-          <a href="#" class="project-link">See More</a>
-        </div>
+      <h2 data-aos="fade-up">About Me</h2>
+      <p data-aos="fade-up" data-aos-delay="200">
+        I blend technical precision with creative passion. As a chemical engineering student, my mind thrives on innovation; yet when I'm not in the lab, you'll find me behind a camera or immersed in literature.
+      </p>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights" class="highlights-section">
+    <div class="container">
+      <div class="highlight-card" data-aos="flip-left">
+        <h3>Projects</h3>
+        <p>Explore my innovative projects and creative designs.</p>
+        <a href="pages/projects.html" class="btn">See Projects</a>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Interested in working together? Drop me a line!</p>
-      <!-- Social icons or form here -->
-      <div class="social-icons">
-        <a href="https://github.com/YourGitHub" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/YourLinkedIn" target="_blank">LinkedIn</a>
-        <!-- Add more as needed -->
+      <div class="highlight-card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Photography</h3>
+        <p>Discover moments captured through my lens.</p>
+        <a href="pages/photography.html" class="btn">View Photography</a>
+      </div>
+      <div class="highlight-card" data-aos="flip-left" data-aos-delay="400">
+        <h3>Books</h3>
+        <p>Dive into my curated collection of inspiring reads.</p>
+        <a href="pages/books.html" class="btn">Browse Books</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Your Name</p>
+  <footer data-aos="fade-in">
+    <div class="container">
+      <p>© 2025 Christine Pearl Agustin</p>
+    </div>
   </footer>
 
+  <!-- AOS Animation Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true,
+    });
+  </script>
 </body>
 </html>
