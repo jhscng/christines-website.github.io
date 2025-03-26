@@ -25,42 +25,58 @@ a {
   padding: 20px 0;
 }
 
-/* Navbar */
+
+/* Example minimal navbar styling */
 .navbar {
-  background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
-  padding: 1rem 0;
+  background-color: #00154f;  /* Example navy color */
+  padding: 0.3rem 1rem;       /* Very small vertical padding */
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  display: flex;
+  align-items: center;        /* Vertically center the nav content */
 }
 
+/* Container inside the navbar */
 .nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo or name styling */
 .logo {
-  font-size: 1.8rem;
+  font-size: 1rem;            /* Smaller font size to reduce height */
   font-weight: 600;
-  color: #333;
+  color: #fff;
+  margin-right: 1rem;
 }
 
+/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin: 0;
 }
 
+/* Individual link styling */
 .nav-links li a {
-  font-size: 1rem;
-  transition: color 0.3s;
-  color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;          /* Smaller text to keep bar short */
+  line-height: 1;            /* Reduce line-height for a compact bar */
+  padding: 0.3rem 0;         /* Minimal vertical padding around text */
+  transition: color 0.2s;
 }
 
 .nav-links li a:hover {
-  color: #ff69b4;
+  color: #ccc;
 }
+
 
 /* Hero Section */
 .hero-section {
