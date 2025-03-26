@@ -5,14 +5,218 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Christine Pearl Agustin - Portfolio</title>
 
-  <!-- Link to your main CSS file -->
-  <link rel="stylesheet" href="style.css" />
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Inline CSS for convenience (you can also move this to style.css) -->
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      /* We'll give a subtle gradient background to the entire page */
+      background: linear-gradient(45deg, #fff, #ffe6f2);
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: linear-gradient(45deg, #ffe6f2, #fff);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links li a {
+      font-size: 1rem;
+      transition: color 0.3s;
+      color: #333;
+    }
+    .nav-links li a:hover {
+      color: #ff69b4;
+    }
+
+    /* Hero Section (Pastel Pink to White) */
+    .hero-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ffe6f2, #fff);
+    }
+    .hero-container h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-container p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+      color: #333;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #ffe6f2, #ffb6c1);
+      transform: scale(1.05);
+    }
+
+    /* About Section (Pastel Pink-White) */
+    .about-section {
+      background: linear-gradient(135deg, #fff, #ffe6f2);
+      padding: 4rem 0;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about-photo img {
+      max-width: 300px;
+      border-radius: 8px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      max-width: 600px;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-text h3 {
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #444;
+    }
+    .about-text p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .read-more:hover {
+      color: #003366;
+    }
+
+    /* Highlights Section (White to Pastel Pink) */
+    .highlights-section {
+      background: linear-gradient(135deg, #ffe6f2, #fff);
+      padding: 3rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .highlight-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      color: #333;
+    }
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .highlight-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .highlight-card p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(45deg, #fff, #ffe6f2);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-container h1 {
+        font-size: 2.5rem;
+      }
+      .nav-links {
+        flex-direction: column;
+      }
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-photo img {
+        max-width: 250px;
+      }
+      .highlight-card {
+        min-width: 220px;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -32,7 +236,7 @@
     </div>
   </header>
 
-  <!-- Hero Section (Pastel Pink Gradient) -->
+  <!-- Hero Section -->
   <section id="hero" class="hero-section" data-aos="fade-in">
     <div class="container hero-container">
       <h1 data-aos="fade-up" data-aos-delay="200">Welcome to My Portfolio</h1>
@@ -45,7 +249,7 @@
     </div>
   </section>
 
-  <!-- About Me Section (Pastel Blue Background) -->
+  <!-- About Me Section -->
   <section id="about" class="about-section" data-aos="fade-in">
     <div class="container about-container">
       <!-- Photo on the left -->
@@ -57,9 +261,7 @@
       <!-- Text on the right -->
       <div class="about-text" data-aos="fade-up" data-aos-delay="200">
         <h2>About Me</h2>
-        <h3>
-          Hi, I'm Christine Pearl Agustin, a second-year Chemical Engineering student.
-        </h3>
+        <h3>Hi, I'm Christine Pearl Agustin, a second-year Chemical Engineering student.</h3>
         <p>
           I'm passionate about tackling complex challenges in innovation-driven environments. 
           With hands-on experience in advanced projects and a strong foundation in engineering 
@@ -69,7 +271,6 @@
           When I'm not in the lab, you'll find me behind a camera capturing life's moments, or 
           immersed in a great book, discovering new perspectives and stories.
         </p>
-        <!-- You can link this to a deeper "about" section or simply remove if not needed -->
         <a href="#highlights" class="read-more">Read more below &#x279C;</a>
       </div>
     </div>
