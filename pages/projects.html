@@ -4,14 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Christine Pearl Agustin</title>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
   <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-
-  <!-- Inline CSS: Single Uniform Pastel Pink Background -->
   <style>
     /* RESET & BASE */
     * {
@@ -20,23 +16,26 @@
       box-sizing: border-box;
     }
     body {
-      margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
       color: #333;
-      /* Single uniform pastel pink background (no gradient) */
-      background: #ffc9d6;
+      /* Uniform pastel pink background (same color for both stops) */
+      background: linear-gradient(135deg, #fff0f5, #fff0f5);
       line-height: 1.6;
     }
     a {
       color: inherit;
       text-decoration: none;
     }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
 
     /* NAVBAR */
     .navbar {
-      /* optional: if you want a different color or a slight gradient, adjust here */
-      background: none;
+      background: none; /* let the uniform background show through */
       padding: 0.5rem 1rem;
       position: sticky;
       top: 0;
@@ -63,29 +62,18 @@
       gap: 1rem;
     }
     .nav-links li a {
-      color: #333;
-      text-decoration: none;
       font-size: 0.9rem;
-      line-height: 1;
       padding: 0.3rem 0;
-      transition: color 0.2s;
+      transition: color 0.3s;
     }
     .nav-links li a:hover {
       color: #ff69b4;
     }
 
-    /* CONTAINER */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 3rem 0; /* spacing around the page content */
-    }
-
-    /* PROJECTS SECTION */
+    /* PROJECTS OVERVIEW SECTION */
     .projects-overview {
-      /* no separate background => uses uniform pastel pink from body */
-      margin-top: 4rem; /* optional extra spacing below navbar */
+      margin-top: 4rem;
+      /* No separate background so the body's uniform pastel pink shows */
     }
     .projects-overview h1 {
       text-align: center;
@@ -137,7 +125,6 @@
       font-weight: 600;
       transition: background 0.3s, transform 0.3s;
       color: #333;
-      text-decoration: none;
     }
     .btn:hover {
       background: linear-gradient(45deg, #ffe6f2, #ffb6c1);
@@ -146,14 +133,13 @@
 
     /* FOOTER */
     footer {
-      background: none; /* same pink background from body */
+      background: none; /* same uniform background */
       text-align: center;
       padding: 2rem 0;
       color: #333;
     }
   </style>
 </head>
-
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
@@ -171,7 +157,7 @@
     </div>
   </header>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS OVERVIEW SECTION -->
   <section class="projects-overview" data-aos="fade-in">
     <div class="container">
       <h1 data-aos="fade-up">Projects</h1>
@@ -183,7 +169,6 @@
           <p>Discover how creativity and engineering come together.</p>
           <a href="../projects/project1.html" class="btn">View Details</a>
         </div>
-
         <!-- Project Card 2 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
           <img src="../project2.jpg" alt="Project 2">
@@ -191,7 +176,6 @@
           <p>Exploring eco-friendly innovations in material science.</p>
           <a href="../projects/project2.html" class="btn">View Details</a>
         </div>
-
         <!-- Project Card 3 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
           <img src="../project3.jpg" alt="Project 3">
@@ -205,7 +189,9 @@
 
   <!-- FOOTER -->
   <footer data-aos="fade-in">
-    <p>© 2025 Christine Pearl Agustin</p>
+    <div class="container">
+      <p>© 2025 Christine Pearl Agustin</p>
+    </div>
   </footer>
 
   <!-- AOS Animation JS -->
