@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Books - Christine Pearl Agustin</title>
-  <link rel="stylesheet" href="../style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Christine Pearl Agustin - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Inline CSS for convenience (unchanged except for .navbar) -->
   <style>
     /* Global Reset */
     * {
@@ -17,9 +22,8 @@
     body {
       font-family: 'Inter', sans-serif;
       color: #333;
-      /* Uniform pastel pink background (same color for both stops) */
-      background: linear-gradient(135deg, #fff0f5, #fff0f5);
       line-height: 1.6;
+      background: linear-gradient(45deg, #fff, #ffe6f2);
     }
     a {
       color: inherit;
@@ -31,97 +35,157 @@
       margin: auto;
       padding: 20px 0;
     }
-    /* NAVBAR - Updated to use the same gradient as the homepage */
+
+    /* NAVBAR - SLIGHTLY DARKER PASTEL PINK, SMALLER HEIGHT */
     .navbar {
-      background: linear-gradient(45deg, #fff, #ffe6f2);
-      padding: 0.5rem 1rem;
+      /* Subtle darker pastel pink gradient */
+      background: linear-gradient(45deg, #ffdce1, #ffcce1);
+      padding: 0.3rem 0; /* Even smaller vertical padding */
       position: sticky;
       top: 0;
       z-index: 1000;
-      display: flex;
-      align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .nav-container {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 600;
-      color: #000;  /* Black logo text */
+      color: #333;
     }
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
     }
     .nav-links li a {
-      font-size: 0.9rem;
-      padding: 0.3rem 0;
+      font-size: 1rem;
       transition: color 0.3s;
-      color: #000;  /* Black navigation link text */
+      color: #333;
     }
     .nav-links li a:hover {
       color: #ff69b4;
     }
-    /* BOOKS SECTION */
-    .books-section {
-      padding: 4rem 0;
-      /* No separate background so the body's uniform pastel pink shows through */
-      background: none;
-    }
-    .books-section h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-    .books-section p {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #333;
-    }
-    .book-grid {
+    /* Hero Section (Pastel Pink to White) */
+    .hero-section {
+      min-height: 80vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      align-items: center;
       justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ffe6f2, #fff);
     }
-    .book-card {
+    .hero-container h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-container p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+      color: #333;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #ffe6f2, #ffb6c1);
+      transform: scale(1.05);
+    }
+
+    /* About Section (Pastel Pink-White) */
+    .about-section {
+      background: linear-gradient(135deg, #fff, #ffe6f2);
+      padding: 4rem 0;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about-photo img {
+      max-width: 300px;
+      border-radius: 8px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      max-width: 600px;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-text h3 {
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #444;
+    }
+    .about-text p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .read-more:hover {
+      color: #003366;
+    }
+
+    /* Highlights Section (White to Pastel Pink) */
+    .highlights-section {
+      background: linear-gradient(135deg, #ffe6f2, #fff);
+      padding: 3rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .highlight-card {
       background: #fff;
-      padding: 1rem;
+      padding: 2rem;
       border-radius: 10px;
       text-align: center;
-      width: 250px;
+      margin: 1rem;
       transition: transform 0.3s, box-shadow 0.3s;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      color: #333;
     }
-    .book-card:hover {
+    .highlight-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-    .book-card img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
+    .highlight-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    .book-card h3 {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+    .highlight-card p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
     }
-    .book-card p {
-      margin: 0.2rem 0;
-      font-size: 0.9rem;
-    }
-    .book-rating {
-      color: #ffbf00;
-      font-size: 1.2rem;
-    }
-    /* FOOTER */
+
+    /* Footer */
     footer {
       background: linear-gradient(45deg, #fff, #ffe6f2);
       padding: 2rem 0;
@@ -130,63 +194,116 @@
       color: #333;
       margin-top: 2rem;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-container h1 {
+        font-size: 2.5rem;
+      }
+      .nav-links {
+        flex-direction: column;
+      }
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-photo img {
+        max-width: 250px;
+      }
+      .highlight-card {
+        min-width: 220px;
+      }
+    }
   </style>
+
 </head>
 <body>
-  <!-- NAVBAR -->
+
+  <!-- Navigation -->
   <header class="navbar">
-    <div class="nav-container">
+    <div class="container nav-container">
       <div class="logo">Christine Pearl Agustin</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="photography.html">Photography</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/photography.html">Photography</a></li>
+          <li><a href="pages/books.html">Books</a></li>
+          <li><a href="pages/resume.html">Resume</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- BOOKS SECTION -->
-  <section class="books-section" data-aos="fade-in">
-    <div class="container">
-      <h1 data-aos="fade-up">Books I Love</h1>
-      <p data-aos="fade-up" data-aos-delay="200">
-        When I'm not engineering, I'm diving into captivating stories. Here are some of my favorite reads.
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section" data-aos="fade-in">
+    <div class="container hero-container">
+      <h1 data-aos="fade-up" data-aos-delay="200">Welcome to My Portfolio</h1>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Blending Chemical Engineering, creativity, and a passion for discovery.
       </p>
-      <div class="book-grid">
-        <div class="book-card" data-aos="flip-up">
-          <img src="../book1.jpg" alt="The Midnight Library">
-          <h3>The Midnight Library</h3>
-          <p>by Matt Haig</p>
-          <div class="book-rating">★★★★☆</div>
-        </div>
-        <div class="book-card" data-aos="flip-up" data-aos-delay="100">
-          <img src="../book2.jpg" alt="Educated">
-          <h3>Educated</h3>
-          <p>by Tara Westover</p>
-          <div class="book-rating">★★★★★</div>
-        </div>
-        <div class="book-card" data-aos="flip-up" data-aos-delay="200">
-          <img src="../book3.jpg" alt="The Alchemist">
-          <h3>The Alchemist</h3>
-          <p>by Paulo Coelho</p>
-          <div class="book-rating">★★★★☆</div>
-        </div>
-        <!-- Add more book cards as desired -->
+      <a href="pages/projects.html" class="btn" data-aos="fade-up" data-aos-delay="600">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section" data-aos="fade-in">
+    <div class="container about-container">
+      <!-- Photo on the left -->
+      <div class="about-photo" data-aos="fade-up">
+        <!-- Replace "my_photo.jpg" with your actual photo filename -->
+        <img src="my_photo.jpg" alt="Christine Pearl Agustin" />
+      </div>
+
+      <!-- Text on the right -->
+      <div class="about-text" data-aos="fade-up" data-aos-delay="200">
+        <h2>About Me</h2>
+        <h3>Hi, I'm Christine Pearl Agustin, a second-year Chemical Engineering student.</h3>
+        <p>
+          I'm passionate about tackling complex challenges in innovation-driven environments. 
+          With hands-on experience in advanced projects and a strong foundation in engineering 
+          principles, I thrive on pushing the boundaries of possibility and problem-solving.
+        </p>
+        <p>
+          When I'm not in the lab, you'll find me behind a camera capturing life's moments, or 
+          immersed in a great book, discovering new perspectives and stories.
+        </p>
+        <a href="#highlights" class="read-more">Read more below &#x279C;</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Highlights Section -->
+  <section id="highlights" class="highlights-section">
+    <div class="container">
+      <div class="highlight-card" data-aos="flip-left">
+        <h3>Projects</h3>
+        <p>Explore my innovative projects and creative designs.</p>
+        <a href="pages/projects.html" class="btn">See Projects</a>
+      </div>
+      <div class="highlight-card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Photography</h3>
+        <p>Discover moments captured through my lens.</p>
+        <a href="pages/photography.html" class="btn">View Photography</a>
+      </div>
+      <div class="highlight-card" data-aos="flip-left" data-aos-delay="400">
+        <h3>Books</h3>
+        <p>Dive into my curated collection of inspiring reads.</p>
+        <a href="pages/books.html" class="btn">Browse Books</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer data-aos="fade-in">
     <div class="container">
       <p>© 2025 Christine Pearl Agustin</p>
     </div>
   </footer>
 
+  <!-- AOS Animation Library JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
