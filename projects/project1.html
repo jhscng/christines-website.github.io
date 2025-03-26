@@ -7,45 +7,70 @@
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
   <style>
-    /* Pastel pink & white gradient theme for Project Detail page */
+    /* Make the entire page a single pastel pink gradient */
     body {
-      background: linear-gradient(135deg, #fff, #ffe6f2);
+      margin: 0;
+      padding: 0;
       color: #333;
-    }
-    .project-detail {
       background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Navbar can stay transparent so the gradient shows through */
+    .navbar {
+      background: none; /* or remove if you want a different navbar style */
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Container for consistent layout */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    /* Remove separate background on project-detail
+       so it blends with the body gradient */
+    .project-detail {
+      /* No custom background here; rely on body’s gradient */
       padding: 4rem 0;
     }
-    .project-detail h1,
-    .project-detail h2,
-    .project-detail p,
-    .project-detail ul {
+
+    /* Headings, paragraphs, etc. */
+    h1, h2 {
+      margin-top: 0;
       color: #333;
     }
-    .project-detail ul {
-      list-style: none;
-      padding-left: 0;
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
     }
-    .project-detail li {
-      margin-bottom: 0.5rem;
-    }
+
+    /* Project image */
     .project-image {
       max-width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
+      display: block;
+      margin: 2rem 0;
     }
     .project-image:hover {
       transform: scale(1.05);
     }
+
+    /* Footer with no separate background */
     footer {
-      background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
-      padding: 2rem 0;
+      background: none;
       text-align: center;
-      font-size: 0.9rem;
+      padding: 2rem 0;
       color: #333;
-      margin-top: 2rem;
     }
   </style>
 </head>
