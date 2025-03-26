@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Christine Pearl Agustin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <!-- Inline CSS: Single Uniform Pastel Pink Background -->
   <style>
     /* RESET & BASE */
     * {
@@ -19,8 +24,8 @@
       padding: 0;
       font-family: 'Inter', sans-serif;
       color: #333;
-      /* Pastel pink gradient throughout */
-      background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
+      /* Single uniform pastel pink background (no gradient) */
+      background: #ffc9d6;
       line-height: 1.6;
     }
     a {
@@ -28,9 +33,10 @@
       text-decoration: none;
     }
 
-    /* NAVBAR (transparent or slight gradient, if you prefer) */
+    /* NAVBAR */
     .navbar {
-      background: none; /* or use your darker pink gradient if you want */
+      /* optional: if you want a different color or a slight gradient, adjust here */
+      background: none;
       padding: 0.5rem 1rem;
       position: sticky;
       top: 0;
@@ -57,8 +63,8 @@
       gap: 1rem;
     }
     .nav-links li a {
-      text-decoration: none;
       color: #333;
+      text-decoration: none;
       font-size: 0.9rem;
       line-height: 1;
       padding: 0.3rem 0;
@@ -78,8 +84,8 @@
 
     /* PROJECTS SECTION */
     .projects-overview {
-      /* No separate background so it inherits the pastel gradient from body */
-      margin-top: 4rem; /* optional spacing below navbar, if needed */
+      /* no separate background => uses uniform pastel pink from body */
+      margin-top: 4rem; /* optional extra spacing below navbar */
     }
     .projects-overview h1 {
       text-align: center;
@@ -96,7 +102,7 @@
 
     /* WHITE PROJECT CARDS */
     .project-card {
-      background: #fff; /* stands out against the pink gradient */
+      background: #fff;
       padding: 1.5rem;
       border-radius: 10px;
       text-align: center;
@@ -140,11 +146,10 @@
 
     /* FOOTER */
     footer {
-      background: none; /* let the pink gradient show through */
+      background: none; /* same pink background from body */
       text-align: center;
       padding: 2rem 0;
       color: #333;
-      /* no margin or separate background => no gap at bottom */
     }
   </style>
 </head>
@@ -171,21 +176,23 @@
     <div class="container">
       <h1 data-aos="fade-up">Projects</h1>
       <div class="projects-grid">
-        <!-- Example Project Card 1 -->
+        <!-- Project Card 1 -->
         <div class="project-card" data-aos="zoom-in">
           <img src="../project1.jpg" alt="Project 1">
           <h3>Project 1: Innovative Process Design</h3>
           <p>Discover how creativity and engineering come together.</p>
           <a href="../projects/project1.html" class="btn">View Details</a>
         </div>
-        <!-- Example Project Card 2 -->
+
+        <!-- Project Card 2 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
           <img src="../project2.jpg" alt="Project 2">
           <h3>Project 2: Sustainable Materials Research</h3>
           <p>Exploring eco-friendly innovations in material science.</p>
           <a href="../projects/project2.html" class="btn">View Details</a>
         </div>
-        <!-- Example Project Card 3 -->
+
+        <!-- Project Card 3 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
           <img src="../project3.jpg" alt="Project 3">
           <h3>Project 3: Interactive Data Visualization</h3>
