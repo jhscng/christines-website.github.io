@@ -28,13 +28,15 @@ a {
 
 /* Example minimal navbar styling */
 .navbar {
-  background-color: #00154f;  /* Example navy color */
-  padding: 0.3rem 1rem;       /* Very small vertical padding */
+  /* Pastel darker pink gradient */
+  background: linear-gradient(45deg, #ffdce1, #ffcce1);
+  /* Minimal padding for a short height */
+  padding: 0.3rem 1rem;
   position: sticky;
   top: 0;
   z-index: 999;
   display: flex;
-  align-items: center;        /* Vertically center the nav content */
+  align-items: center; /* Vertically center items */
 }
 
 /* Container inside the navbar */
