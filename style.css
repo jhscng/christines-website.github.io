@@ -1,0 +1,152 @@
+/* Base Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000;       /* Dark background */
+  color: #fff;            /* Light text */
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 999;
+  padding: 1rem 0;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a:hover {
+  color: #ff1493; /* Example accent color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem 0;
+}
+.hero-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.accent {
+  color: #ff1493; /* Accent color */
+}
+.hero-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ff1493;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #ff69b4;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 3rem 0;
+}
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.project-card {
+  background: #111; /* Slightly lighter than #000 for contrast */
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-link {
+  color: #ff1493;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.social-icons a:hover {
+  color: #ff1493;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #111;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 2.5rem;
+  }
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
