@@ -18,13 +18,40 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Transparent, sticky navbar */
+    /* Transparent, sticky navbar with fixed height */
     .navbar {
-      background: none;
-      padding: 1rem 0;
+      background: none;  /* keep it transparent so the gradient shows */
+      height: 60px;      /* define a fixed height for the navbar */
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      align-items: center;  /* vertically center the nav content */
+      padding: 0 1rem;       /* horizontal padding only */
+    }
+
+    .nav-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
     }
 
     /* Container for consistent layout */
@@ -35,11 +62,10 @@
       padding: 2rem 0;
     }
 
-    /* MAIN FIX: Add padding-top to prevent overlap */
+    /* Reserve space under the navbar to prevent overlap */
     .project-detail {
-      /* No separate background so it blends with the body gradient */
-      padding: 4rem 0;
-      padding-top: 5rem; /* Extra space for the sticky navbar */
+      margin-top: 60px;  /* matches the navbar height */
+      padding: 4rem 0;   /* or however much you want */
     }
 
     /* Headings, paragraphs, etc. */
@@ -76,7 +102,7 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="container nav-container">
+    <div class="nav-container">
       <div class="logo">Christine Pearl Agustin</div>
       <nav>
         <ul class="nav-links">
