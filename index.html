@@ -11,7 +11,7 @@
   <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-  <!-- Inline CSS for convenience (you can also move this to style.css) -->
+  <!-- Inline CSS for convenience (unchanged except for .navbar) -->
   <style>
     /* Global Reset */
     * {
@@ -23,7 +23,6 @@
       font-family: 'Inter', sans-serif;
       color: #333;
       line-height: 1.6;
-      /* We'll give a subtle gradient background to the entire page */
       background: linear-gradient(45deg, #fff, #ffe6f2);
     }
     a {
@@ -37,10 +36,11 @@
       padding: 20px 0;
     }
 
-    /* Navigation */
+    /* NAVBAR - UPDATED ONLY */
     .navbar {
-      background: linear-gradient(45deg, #ffe6f2, #fff);
-      padding: 1rem 0;
+      /* Darker pastel pink gradient, smaller padding */
+      background: linear-gradient(45deg, #ffc9d6, #ffb6c1);
+      padding: 0.5rem 0; /* smaller height */
       position: sticky;
       top: 0;
       z-index: 1000;
