@@ -1,16 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resume - Christine Pearl Agustin</title>
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      /* Uniform pastel pink background */
+      background: linear-gradient(135deg, #fff0f5, #fff0f5);
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    /* NAVBAR: Same as Home Page */
+    .navbar {
+      background: linear-gradient(45deg, #fff, #ffe6f2);
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links li a {
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      transition: color 0.3s;
+      color: #333;
+    }
+    .nav-links li a:hover {
+      color: #ff69b4;
+    }
+
+    /* RESUME SECTION */
+    .resume-section {
+      padding: 4rem 0;
+      /* No separate background so the body's uniform pastel pink shows through */
+      background: none;
+    }
+    .resume-section h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    .resume-section p {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+      color: #333;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #ffe6f2, #ffb6c1);
+      transform: scale(1.05);
+    }
+    .resume-embed {
+      margin-top: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: none;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
+  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container nav-container">
+    <div class="nav-container">
       <div class="logo">Christine Pearl Agustin</div>
       <nav>
         <ul class="nav-links">
@@ -24,6 +134,7 @@
     </div>
   </header>
 
+  <!-- RESUME SECTION -->
   <section class="resume-section" data-aos="fade-in">
     <div class="container">
       <h1 data-aos="fade-up">My Resume</h1>
@@ -37,12 +148,14 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer data-aos="fade-in">
     <div class="container">
       <p>© 2025 Christine Pearl Agustin</p>
     </div>
   </footer>
 
+  <!-- AOS Animation Library JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
