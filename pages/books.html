@@ -8,20 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <style>
-    /* RESET & BASE */
+    /* Use a uniform pastel pink background for the entire page */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
     body {
       font-family: 'Inter', sans-serif;
       color: #333;
-      /* Uniform pastel pink background using the same color for both stops */
+      /* Uniform pastel pink background (same color for both stops) */
       background: linear-gradient(135deg, #fff0f5, #fff0f5);
       line-height: 1.6;
     }
@@ -35,7 +31,7 @@
       margin: auto;
       padding: 20px 0;
     }
-    /* NAVBAR (same as home page) */
+    /* NAVBAR (same as home page, but with black font) */
     .navbar {
       background: linear-gradient(45deg, #fff, #ffe6f2);
       padding: 0.5rem 1rem;
@@ -57,6 +53,7 @@
     .logo {
       font-size: 1.5rem;
       font-weight: 600;
+      color: #000;  /* Black logo text */
     }
     .nav-links {
       list-style: none;
@@ -67,6 +64,7 @@
       font-size: 0.9rem;
       padding: 0.3rem 0;
       transition: color 0.3s;
+      color: #000;  /* Black navigation link text */
     }
     .nav-links li a:hover {
       color: #ff69b4;
@@ -125,7 +123,7 @@
     }
     /* FOOTER */
     footer {
-      /* No separate background; the uniform pastel pink shows through */
+      /* Let the uniform pastel pink background show through */
       background: none;
       text-align: center;
       padding: 2rem 0;
@@ -189,7 +187,6 @@
     </div>
   </footer>
 
-  <!-- AOS Animation Library JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
