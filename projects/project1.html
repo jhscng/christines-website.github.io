@@ -9,7 +9,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
   <style>
-    /* Make the entire page a single pastel pink gradient */
+    /* Single pastel pink gradient across the whole page */
     body {
       margin: 0;
       padding: 0;
@@ -18,9 +18,9 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Navbar can stay transparent so the gradient shows through */
+    /* Transparent, sticky navbar */
     .navbar {
-      background: none; /* or remove if you want a different navbar style */
+      background: none;
       padding: 1rem 0;
       position: sticky;
       top: 0;
@@ -35,11 +35,11 @@
       padding: 2rem 0;
     }
 
-    /* Remove separate background on project-detail
-       so it blends with the body gradient */
+    /* MAIN FIX: Add padding-top to prevent overlap */
     .project-detail {
-      /* No custom background here; rely on body’s gradient */
+      /* No separate background so it blends with the body gradient */
       padding: 4rem 0;
+      padding-top: 5rem; /* Extra space for the sticky navbar */
     }
 
     /* Headings, paragraphs, etc. */
