@@ -7,27 +7,28 @@
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
   <style>
-    /* Single pastel pink gradient across the whole page */
+    /* Uniform light pink gradient across the entire page */
     body {
       margin: 0;
       padding: 0;
       color: #333;
-      background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
       font-family: 'Inter', sans-serif;
+      /* Light pink gradient */
+      background: linear-gradient(135deg, #fff0f5, #ffe6f2);
+      line-height: 1.6;
     }
 
     /* Transparent, sticky navbar */
     .navbar {
-      background: none;
+      background: none; /* Let the body's gradient show */
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    /* Container for consistent layout */
+    /* Container for layout consistency */
     .container {
       width: 90%;
       max-width: 1200px;
@@ -35,11 +36,10 @@
       padding: 2rem 0;
     }
 
-    /* MAIN FIX: Add padding-top to prevent overlap */
+    /* Project detail section without its own background */
     .project-detail {
-      /* No separate background so it blends with the body gradient */
       padding: 4rem 0;
-      padding-top: 5rem; /* Extra space for the sticky navbar */
+      padding-top: 5rem; /* extra space for sticky navbar */
     }
 
     /* Headings, paragraphs, etc. */
@@ -52,7 +52,7 @@
       line-height: 1.6;
     }
 
-    /* Project image */
+    /* Project image styling */
     .project-image {
       max-width: 100%;
       border-radius: 8px;
@@ -65,7 +65,7 @@
       transform: scale(1.05);
     }
 
-    /* Footer with no separate background */
+    /* Footer with transparent background so the gradient continues */
     footer {
       background: none;
       text-align: center;
