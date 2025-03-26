@@ -7,6 +7,60 @@
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* Pastel pink & white theme overrides */
+    body {
+      background: linear-gradient(135deg, #fff, #ffe6f2);
+      color: #333;
+    }
+    .books-section {
+      background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
+      padding: 4rem 0;
+    }
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .book-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .book-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+    .book-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+    .book-card p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+    .book-rating {
+      color: #ffbf00;
+      font-size: 1.2rem;
+    }
+    footer {
+      background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
