@@ -6,7 +6,8 @@
 }
 body {
   font-family: 'Inter', sans-serif;
-  background: #111;
+  /* Dark background with a subtle gradient overlay */
+  background: linear-gradient(135deg, #1a1a1a, #111);
   color: #fff;
   line-height: 1.6;
 }
@@ -23,7 +24,7 @@ a {
 
 /* Navbar */
 .navbar {
-  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -37,6 +38,7 @@ a {
 .logo {
   font-size: 1.8rem;
   font-weight: 600;
+  color: #333;
 }
 .nav-links {
   list-style: none;
@@ -46,9 +48,10 @@ a {
 .nav-links li a {
   font-size: 1rem;
   transition: color 0.3s;
+  color: #333;
 }
 .nav-links li a:hover {
-  color: #ffe6f2;
+  color: #ff69b4;
 }
 
 /* Hero Section */
@@ -58,29 +61,32 @@ a {
   justify-content: center;
   min-height: 90vh;
   text-align: center;
-  background: #000;
+  background: linear-gradient(135deg, #ffe6f2, #ffb6c1);
   padding: 2rem;
 }
 .hero-container h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 .hero-container p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #555;
 }
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
   transition: background 0.3s, transform 0.3s;
+  color: #333;
 }
 .btn:hover {
-  background: linear-gradient(45deg, #ff1493, #ff69b4);
+  background: linear-gradient(45deg, #ffe6f2, #ffb6c1);
   transform: scale(1.05);
 }
 
@@ -88,6 +94,8 @@ a {
 .about-section {
   padding: 3rem 0;
   text-align: center;
+  background: #fff;
+  color: #333;
 }
 .about-section h2 {
   font-size: 2.5rem;
@@ -101,7 +109,7 @@ a {
 
 /* Highlights Section */
 .highlights-section {
-  background: #1a1a1a;
+  background: linear-gradient(135deg, #ffe6f2, #fff);
   padding: 3rem 0;
   display: flex;
   justify-content: center;
@@ -109,7 +117,7 @@ a {
   flex-wrap: wrap;
 }
 .highlight-card {
-  background: #222;
+  background: #fff;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
@@ -117,10 +125,12 @@ a {
   transition: transform 0.3s, box-shadow 0.3s;
   flex: 1;
   min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #333;
 }
 .highlight-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .highlight-card h3 {
   font-size: 1.8rem;
@@ -131,7 +141,7 @@ a {
   margin-bottom: 1.5rem;
 }
 
-/* Projects Overview / Cards (used in projects page) */
+/* Projects Overview / Cards */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -217,10 +227,11 @@ a {
 
 /* Footer */
 footer {
-  background: #111;
+  background: linear-gradient(45deg, #ffb6c1, #ffe6f2);
   padding: 2rem 0;
   text-align: center;
   font-size: 0.9rem;
+  color: #333;
 }
 
 /* Responsive */
